@@ -2,13 +2,14 @@
 
 It is a GitPod Custom Docker image which contains a list of tools required for cloud engineering.
 
-Currently it includes:
+It is based on official `gitpod/workspace-full:latest` plus it includes:
 * terraform 1.0.10
 * terragrunt 0.35.6
 * kubectl 1.21.6
 * helm 3.7.1
 * helmfile 0.140.0
 * awscli 2.3.3
+* k9s 0.24.15
 
 And a custom script to provide the ability to perform AWS SSO login in the workspace context. It relies on the [GitPod Environment Variables](https://www.gitpod.io/docs/environment-variables) as a source for `~/.aws/config` file generation.
 
