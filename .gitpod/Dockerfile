@@ -20,4 +20,4 @@ RUN asdf install kubectl 1.21.6 && asdf global kubectl 1.21.6 && \
 
 COPY --chown=gitpod:gitpod .gitpod/generate_sso_config.sh $HOME/generate_sso_config.sh
 
-CMD $HOME/generate_sso_config.sh && bash
+CMD $HOME/generate_sso_config.sh && echo "hello" && bash
