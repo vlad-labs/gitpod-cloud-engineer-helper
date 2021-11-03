@@ -18,10 +18,6 @@ RUN asdf install kubectl 1.21.6 && asdf global kubectl 1.21.6 && \
     asdf install helmfile 0.140.0 && asdf global helmfile 0.140.0 && \
     asdf install awscli 2.3.3 && asdf global awscli 2.3.3
 
+COPY --chown=gitpod:gitpod generate_sso_config.sh $HOME/generate_sso_config.sh
 
-RUN mkdir $HOME/.aws && printf '[default]\n\
-sso_start_url = https://vlad-labs.awsapps.com/start\n\
-sso_region = us-east-1\n\
-sso_account_id = 894083195231\n\
-sso_role_name = AdministratorAccess\n\
-region = us-east-1' >> $HOME/.aws/config
+CMD $HOME/generate_sso_config.sh && bash
