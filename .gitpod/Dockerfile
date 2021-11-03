@@ -18,6 +18,6 @@ RUN asdf install kubectl 1.21.6 && asdf global kubectl 1.21.6 && \
     asdf install helmfile 0.140.0 && asdf global helmfile 0.140.0 && \
     asdf install awscli 2.3.3 && asdf global awscli 2.3.3
 
-COPY --chown=gitpod:gitpod generate_sso_config.sh $HOME/generate_sso_config.sh
+COPY --chown=gitpod:gitpod .gitpod/generate_sso_config.sh $HOME/generate_sso_config.sh
 
 CMD $HOME/generate_sso_config.sh && bash
