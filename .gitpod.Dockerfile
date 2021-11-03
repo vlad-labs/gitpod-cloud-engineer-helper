@@ -19,4 +19,4 @@ RUN asdf install kubectl 1.21.6 && asdf global kubectl 1.21.6 && \
     asdf install awscli 2.3.3 && asdf global awscli 2.3.3
 
 # https://gist.github.com/pahud/1b932d905549851a6f5d0385712da275
-COPY --chown=gitpod:gitpod .aws_config $HOME/.aws/config
+COPY --chown=gitpod:gitpod gitpod-base-image/.aws_config $HOME/.aws/config
