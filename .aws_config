@@ -1,0 +1,6 @@
+[default]
+sso_start_url = https://vlad-labs.awsapps.com/start
+sso_region = us-east-1
+sso_account_id = 894083195231
+sso_role_name = AdministratorAccess
+region = us-east-1
