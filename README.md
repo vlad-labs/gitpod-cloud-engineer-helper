@@ -8,6 +8,7 @@ It is based on official `gitpod/workspace-full:latest` plus it includes:
 * terragrunt 0.35.6
 * kubectl 1.21.6
 * helm 3.7.1
+* kustomize 4.4.0
 * helm-diff 3.1.3
 * helmfile 0.140.0
 * k9s 0.24.15
