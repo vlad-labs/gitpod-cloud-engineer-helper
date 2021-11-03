@@ -1,3 +1,5 @@
+#!/usr/bin/env bash
+
 check_env_var() {
     if [[ -z ${!1+set} ]]; then echo "$1 should be set as workspace environment variable. Ref: https://www.gitpod.io/docs/environment-variables"; fi
 }
@@ -16,3 +18,5 @@ sso_account_id = ${AWS_SSO_ACCOUNT_ID}
 sso_role_name = ${AWS_SSO_ROLE_NAME}
 region = ${AWS_REGION}
 EOF
+
+aws sso login

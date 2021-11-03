@@ -3,7 +3,7 @@ FROM gitpod/workspace-full:latest
 
 
 RUN git clone https://github.com/asdf-vm/asdf.git ~/.asdf --branch v0.8.1 && echo '. $HOME/.asdf/asdf.sh' >> $HOME/.bashrc
-ENV PATH="/$HOME/.asdf/bin:${PATH}" 
+ENV PATH="$HOME/.asdf/bin:${PATH}" 
 
 # https://github.com/asdf-vm/asdf-plugins
 RUN asdf plugin-add terraform https://github.com/asdf-community/asdf-hashicorp.git && \
@@ -18,6 +18,5 @@ RUN asdf install kubectl 1.21.6 && asdf global kubectl 1.21.6 && \
     asdf install helmfile 0.140.0 && asdf global helmfile 0.140.0 && \
     asdf install awscli 2.3.3 && asdf global awscli 2.3.3
 
-COPY --chown=gitpod:gitpod .gitpod/generate_sso_config.sh $HOME/generate_sso_config.sh
-
-CMD $HOME/generate_sso_config.sh && echo "hello" && bash
+COPY --chown=gitpod:gitpod .gitpod/aws_sso_login $HOME/bin/aws_sso_login.sh
+ENV PATH="$HOME/bin:${PATH}" 
