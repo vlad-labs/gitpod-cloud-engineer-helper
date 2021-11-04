@@ -44,3 +44,8 @@ One can use this repository as a quick starter to experiment and build your own 
 [![Open in GitPod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/vlad-labs/gitpod-cloud-engineer-helper)
 
 Alternatively if you'd like to contribute to this code just make a fork and open a Pull Request back after.
+
+To test you image build and verify that tools works as expected run:
+```bash
+docker build -t gitpod . -f .gitpod/Dockerfile && docker run -it gitpod
+```

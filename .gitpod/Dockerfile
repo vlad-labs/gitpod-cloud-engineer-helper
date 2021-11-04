@@ -21,11 +21,12 @@ RUN asdf install terraform 1.0.10 && asdf global terraform 1.0.10 && \
     asdf install terragrunt 0.35.6 && asdf global terragrunt 0.35.6 && \
     asdf install kubectl 1.21.6 && asdf global kubectl 1.21.6 && \
     asdf install helm 3.7.1 && asdf global helm 3.7.1 && \
-    helm plugin install https://github.com/databus23/helm-diff --version 3.1.3 && \
     asdf install helmfile 0.140.0 && asdf global helmfile 0.140.0 && \
     asdf install awscli 2.3.3 && asdf global awscli 2.3.3 && \ 
     asdf install k9s 0.24.15 && asdf global k9s 0.24.15 && \
-    asdf install stern 1.20.1 && asdf global stern 1.20.1 && \
+    asdf install stern 1.20.1 && asdf global stern 1.20.1
+
+RUN asdf exec helm plugin install https://github.com/databus23/helm-diff --version 3.1.3
 
 COPY --chown=gitpod:gitpod .gitpod/aws_sso_login $HOME/bin/aws_sso_login
 ENV PATH="$HOME/bin:${PATH}" 
