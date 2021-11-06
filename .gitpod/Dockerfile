@@ -24,7 +24,8 @@ RUN asdf install terraform 1.0.10 && asdf global terraform 1.0.10 && \
     asdf install helmfile 0.140.0 && asdf global helmfile 0.140.0 && \
     asdf install awscli 2.3.3 && asdf global awscli 2.3.3 && \ 
     asdf install k9s 0.24.15 && asdf global k9s 0.24.15 && \
-    asdf install stern 1.20.1 && asdf global stern 1.20.1
+    asdf install stern 1.20.1 && asdf global stern 1.20.1 && \
+    asdf install kustomize 4.4.0 && asdf global kustomize 4.4.0
 
 RUN asdf exec helm plugin install https://github.com/databus23/helm-diff --version 3.1.3
 
