@@ -31,8 +31,4 @@ RUN asdf exec helm plugin install https://github.com/databus23/helm-diff --versi
 
 
 COPY --chown=gitpod:gitpod .gitpod/aws_sso_login $HOME/bin/aws_sso_login
-ENV PATH="$HOME/bin:${PATH}" 
-
-RUN curl https://raw.githubusercontent.com/oh-my-fish/oh-my-fish/master/bin/install | fish && fish -c "omf install coffeeandcode"
-
-RUN (echo :; echo /usr/bin/fish) > ~/.bashrc.d/start_correct_shell
+ENV PATH="$HOME/bin:${PATH}"
