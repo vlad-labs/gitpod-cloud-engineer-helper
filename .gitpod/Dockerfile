@@ -14,7 +14,8 @@ RUN asdf plugin-add terraform https://github.com/asdf-community/asdf-hashicorp.g
     asdf plugin add awscli && \
     asdf plugin-add k9s && \
     asdf plugin-add stern && \
-    asdf plugin-add kustomize
+    asdf plugin-add kustomize && \
+    asdf plugin-add eksctl
 
 
 RUN asdf install terraform 1.0.10 && asdf global terraform 1.0.10 && \
@@ -25,7 +26,8 @@ RUN asdf install terraform 1.0.10 && asdf global terraform 1.0.10 && \
     asdf install awscli 2.3.3 && asdf global awscli 2.3.3 && \ 
     asdf install k9s 0.24.15 && asdf global k9s 0.24.15 && \
     asdf install stern 1.20.1 && asdf global stern 1.20.1 && \
-    asdf install kustomize 4.4.0 && asdf global kustomize 4.4.0
+    asdf install kustomize 4.4.0 && asdf global kustomize 4.4.0 && \
+    asdf install eksctl 0.82.0 && asdf global eksctl 0.82.0
 
 RUN asdf exec helm plugin install https://github.com/databus23/helm-diff --version 3.1.3
 
