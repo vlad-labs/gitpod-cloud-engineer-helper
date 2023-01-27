@@ -25,5 +25,5 @@ jobs:
         push: true
         file: .gitpod/Dockerfile
         tags: |
-            public.ecr.aws/vlad-labs/gitpod-cloud-engineer-helper:latest
-            public.ecr.aws/vlad-labs/gitpod-cloud-engineer-helper:${{ github.sha }}
+            public.ecr.aws/k5x7f0j8/gitpod-cloud-engineer-helper:latest
+            public.ecr.aws/k5x7f0j8/gitpod-cloud-engineer-helper:${{ github.sha }}
