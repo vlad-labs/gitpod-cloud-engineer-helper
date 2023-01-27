@@ -3,16 +3,19 @@
 It is a GitPod Custom Docker image which contains a list of tools required for cloud engineering.
 
 It is based on official `gitpod/workspace-full:latest` plus it includes:
-* awscli 2.3.3
-* terraform 1.0.10
-* terragrunt 0.35.6
-* kubectl 1.21.6
-* helm 3.7.1
-* kustomize 4.4.0
+* awscli 2.9.19
+* aws-sam-cli 1.71.0
+* terraform 1.3.7
+* terragrunt 0.43.0
+* kubectl 1.25.6
+* helm 3.11.0
+* kustomize 4.5.7
 * helm-diff 3.1.3
-* helmfile 0.140.0
-* k9s 0.24.15
-* stern 1.20.1
+* helmfile 0.144.0
+* k9s 0.27.0
+* stern 1.22.0
+* eksctl 0.127.0
+* quarkus-cli 2.16.0.Final
 
 And a custom script to provide the ability to perform AWS SSO login in the workspace context. It relies on the [GitPod Environment Variables](https://www.gitpod.io/docs/environment-variables) as a source for `~/.aws/config` file generation.
 
@@ -21,7 +24,7 @@ And a custom script to provide the ability to perform AWS SSO login in the works
 To use the latest version of image, [set it in `.gitpod.yml`](https://www.gitpod.io/docs/42_config_docker/):
 
 ```yaml
-image: public.ecr.aws/vlad-labs/gitpod-cloud-engineer-helper:latest
+image: public.ecr.aws/k5x7f0j8/gitpod-cloud-engineer-helper
 ```
 
 Alternatively one might use a commit SHA as an image tag to pin to a particular version.

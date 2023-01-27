@@ -15,19 +15,23 @@ RUN asdf plugin-add terraform https://github.com/asdf-community/asdf-hashicorp.g
     asdf plugin-add k9s && \
     asdf plugin-add stern && \
     asdf plugin-add kustomize && \
-    asdf plugin-add eksctl
+    asdf plugin-add eksctl &&\
+    asdf plugin add aws-sam-cli https://github.com/amrox/asdf-pyapp.git &&\
+    asdf plugin add quarkus https://github.com/asdf-community/asdf-quarkus.git
 
 
-RUN asdf install terraform 1.0.10 && asdf global terraform 1.0.10 && \
-    asdf install terragrunt 0.35.6 && asdf global terragrunt 0.35.6 && \
-    asdf install kubectl 1.21.6 && asdf global kubectl 1.21.6 && \
-    asdf install helm 3.7.1 && asdf global helm 3.7.1 && \
-    asdf install helmfile 0.140.0 && asdf global helmfile 0.140.0 && \
-    asdf install awscli 2.3.3 && asdf global awscli 2.3.3 && \ 
-    asdf install k9s 0.24.15 && asdf global k9s 0.24.15 && \
-    asdf install stern 1.20.1 && asdf global stern 1.20.1 && \
-    asdf install kustomize 4.4.0 && asdf global kustomize 4.4.0 && \
-    asdf install eksctl 0.82.0 && asdf global eksctl 0.82.0
+RUN asdf install terraform 1.3.7 && asdf global terraform 1.3.7 && \
+    asdf install terragrunt 0.43.0 && asdf global terragrunt 0.43.0 && \
+    asdf install kubectl 1.25.6 && asdf global kubectl 1.25.6 && \
+    asdf install helm 3.11.0 && asdf global helm 3.11.0 && \
+    asdf install helmfile 0.144.0 && asdf global helmfile 0.144.0 && \
+    asdf install awscli 2.9.19 && asdf global awscli 2.9.19 && \ 
+    asdf install k9s 0.27.0 && asdf global k9s 0.27.0 && \
+    asdf install stern 1.22.0 && asdf global stern 1.22.0 && \
+    asdf install kustomize 4.5.7 && asdf global kustomize 4.5.7 && \
+    asdf install eksctl 0.127.0 && asdf global eksctl 0.127.0 &&\
+    asdf install aws-sam-cli 1.71.0 && asdf global aws-sam-cli 1.71.0 &&\
+    asdf install quarkus 2.16.0.Final && asdf global quarkus 2.16.0.Final
 
 RUN asdf exec helm plugin install https://github.com/databus23/helm-diff --version 3.1.3
 
