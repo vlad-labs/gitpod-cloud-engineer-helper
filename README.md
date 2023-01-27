@@ -36,7 +36,6 @@ In order to use AWS SSO following environment varaibles should be set in your Gi
 
 Run `aws_sso_login` in started workspace. VSCode will try open the SSO authorization page in editor but it will fail to load because no external web sites are allowed in GitPod, it is just for local web development. So you need to copy the URL and open it as regular site.
 
-
 ## Contributing
 
 One can use this repository as a quick starter to experiment and build your own Cloud Engineering image
